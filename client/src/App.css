@@ -5,12 +5,3 @@
     display: flex;
     flex-direction: column;
 }
-
-.pokeDiv{
-    width: 60%;
-    padding: 5px 10px;
-    text-align: center;
-    align-self: center;
-    border: 1px #333 dotted
-
-}
