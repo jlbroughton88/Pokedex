@@ -1,16 +1,12 @@
 import React, { Component } from 'react'
 import styled from "styled-components"
 
-export class Header extends Component {
-
-
-    render() {
-        return (
-            <MotherDiv>
-                <h1>Pokedex</h1>
-            </MotherDiv>
-        )
-    }
+const Header = () => {
+    return (
+        <MotherDiv>
+            <h1>Pokedex</h1>
+        </MotherDiv>
+    )
 }
 
 const MotherDiv = styled.div`

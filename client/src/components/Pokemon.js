@@ -16,6 +16,7 @@ class Pokemon extends React.Component {
                 sprites: [],
             },
             isLoading: false
+            
         }
 
     }
@@ -55,6 +56,7 @@ class Pokemon extends React.Component {
                 <p>{id}</p>
                 <img src={sprites.front_default} alt={name}></img>
             </div>
+            <button></button>
         )
     }
 }

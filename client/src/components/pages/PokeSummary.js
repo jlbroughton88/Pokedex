@@ -1,13 +1,12 @@
 import React, { Component } from 'react'
 
- class PokeSummary extends Component {
-    render() {
+ const PokeSummary = () => {
         return (
             <div>
                 Hello from PokeSummary
             </div>
         )
     }
-}
+
 
 export default PokeSummary;

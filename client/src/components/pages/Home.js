@@ -1,9 +1,13 @@
 import React from 'react'
+import Header from "../Header"
+import PokemonList from "../PokemonList";
 
- function Home() {
+
+ const Home = () => {
     return (
         <div>
-            Hello
+            <Header/>
+            <PokemonList/>
         </div>
     )
 }

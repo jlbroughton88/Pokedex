@@ -1,19 +1,18 @@
 import React from 'react';
-import Header from "./components/Header"
-import PokemonList from "./components/PokemonList";
+import Home from "./components/pages/Home"
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom"
+
 import './App.css';
 
-class App extends React.Component {
+const App = () => {
 
+  return (
+    <Router>
+      <div className="App"></div>
+      <Route exact path="/" component={Home} />
+    </Router>
 
-  render() {
-    return (
-        <div className="App">
-          <Header />
-          <PokemonList />
-        </div>
-    );
-  }
+  );
 }
 
 export default App;
