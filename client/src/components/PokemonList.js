@@ -8,6 +8,8 @@ class PokemonList extends React.Component {
         this.state = {
             pokemonList: [],
             isLoading: false,
+            currentLimit: 0,
+            currentOffset: 0
         };
     };
 
@@ -15,9 +17,15 @@ class PokemonList extends React.Component {
         this.fetchData()
     };
 
-    fetchData() {
+    loadMore = () => {
+        this.setState(prevState => ({ 
+            currentLimit: prevState.currentLimit + 20
+        }), () => this.fetchData())
+    }
 
-        fetch("https://pokeapi.co/api/v2/pokemon/?limit=20&offset=0")
+    fetchData() {
+        const { currentLimit, currentOffset } = this.state;
+        fetch(`https://pokeapi.co/api/v2/pokemon/?limit=${currentLimit}&offset=${currentOffset}`)
             .then(res => res.json())
             .then(data => data.results.map(poke => (
                 {
@@ -41,6 +49,7 @@ class PokemonList extends React.Component {
                         return <Pokemon key={name} name={name} id={id} url={url} />
                     }) : null
                 }
+                <button className="loadMore" onClick={this.loadMore}>Load More</button>
             </div>
         );
     }

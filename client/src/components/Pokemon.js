@@ -16,9 +16,7 @@ class Pokemon extends React.Component {
                 sprites: [],
             },
             isLoading: false
-            
         }
-
     }
 
     componentDidMount() {
@@ -50,13 +48,12 @@ class Pokemon extends React.Component {
         const { stats, height, weight, sprites } = this.state.pokemon;
 
         return (
-            <div key={name} style={pokeDiv}>
+            <div key={name} style={pokeDiv} stats={stats} height={height} weight={weight} >
                 <p>{capitalizeFirstLetter(name)}</p>
-                <a href={url}>View</a>
+                <Link to={`/poke/${name}`}>View</Link>
                 <p>{id}</p>
                 <img src={sprites.front_default} alt={name}></img>
             </div>
-            <button></button>
         )
     }
 }
