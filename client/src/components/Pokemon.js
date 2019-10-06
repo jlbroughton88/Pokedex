@@ -90,6 +90,7 @@ const ViewBtn = styled.a`
     text-decoration: none;
     padding: 1.5%;
     color: grey;
+    font-size: 1.15rem;
 `
 
 const LeftDiv = styled.div`
