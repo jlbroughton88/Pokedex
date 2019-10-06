@@ -1,4 +1,6 @@
 import React from "react";
+import { Link } from "react-router-dom"
+
 
 class Pokemon extends React.Component {
 
@@ -34,7 +36,7 @@ class Pokemon extends React.Component {
         return (
             <div key={name} style={pokeDiv}>
                 <p>{capitalizeFirstLetter(name)}</p>
-                <a href={"/pokemon"}>View</a>
+                <a href={url} onClick={() => this.fetchData(name)}>View</a>
                 <p>{id}</p>
             </div>
         )
