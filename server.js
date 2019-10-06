@@ -6,7 +6,7 @@ app.get("/", (req, res) => {
     res.send("Hello from server")
 })
 
-app.use(express.static(path.join(_dirname, "./client/build")))
+app.use(express.static(path.join(__dirname, "/client/build")))
 
 app.use("/", require("./routes.js"))
 
