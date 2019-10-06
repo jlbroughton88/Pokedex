@@ -2,7 +2,7 @@ const express = require("express");
 const path = require("path");
 const app = express();
 
-app.get("/", (req, res) => {
+app.get("/server", (req, res) => {
     res.send("Hello from server")
 })
 
