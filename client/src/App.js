@@ -13,7 +13,6 @@ const App = () => {
       <Route exact path="/" component={Home} />
       <Route path="/poke" component={PokeSummary} />
     </Router>
-
   );
 }
 

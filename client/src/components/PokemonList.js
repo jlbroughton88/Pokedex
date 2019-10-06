@@ -1,4 +1,5 @@
 import React from 'react';
+import styled from "styled-components"
 import Pokemon from "./Pokemon"
 
 
@@ -49,10 +50,20 @@ class PokemonList extends React.Component {
                         return <Pokemon key={name} name={name} id={id} url={url} />
                     }) : null
                 }
-                <button className="loadMore" onClick={this.loadMore}>Load More</button>
+                <LoadBtn className="loadBtn" onClick={this.loadMore}>Load More</LoadBtn>
             </div>
         );
     }
 }
+
+const LoadBtn = styled.button`
+    height: 50px;
+    width: 80px;
+    align-self: center;
+    margin-top: 2.5%;
+    font-size: 0.8rem;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+`
 
 export default PokemonList;
