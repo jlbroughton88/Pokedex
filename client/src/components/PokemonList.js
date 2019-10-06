@@ -8,14 +8,6 @@ class PokemonList extends React.Component {
         this.state = {
             pokemonList: [],
             isLoading: false,
-            pokemon: {
-                id: 0,
-                name: '',
-                stats: [],
-                height: '',
-                weight: '',
-                sprites: [],
-            }
         };
     };
 
@@ -23,22 +15,7 @@ class PokemonList extends React.Component {
         this.fetchData()
     };
 
-    
-
     fetchData() {
-
-        // fetch("https://pokeapi.co/api/v2/pokemon/806")
-        //     .then(res => res.json())
-        //     .then(data => this.setState({
-        //         pokemon: {
-        //             id: data.id,
-        //             name: data.name,
-        //             stats: data.stats,
-        //             height: data.height,
-        //             weight: data.weight,
-        //             sprites: data.sprites
-        //         }
-        //     }, () => console.log(this.state.pokemon)))
 
         fetch("https://pokeapi.co/api/v2/pokemon/?limit=20&offset=0")
             .then(res => res.json())
