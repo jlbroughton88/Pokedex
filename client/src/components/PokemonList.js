@@ -57,11 +57,16 @@ class PokemonList extends React.Component {
 }
 
 const LoadBtn = styled.button`
-    height: 50px;
-    width: 80px;
     align-self: center;
+    display: flex;
+    justify-content: center;
     margin-top: 2.5%;
-    font-size: 0.8rem;
+    padding: 7px 12px;
+    font-size: 1rem;
+    cursor: pointer;
+    font-family: "biko";
+    outline: none;
+    
     -webkit-appearance: none;
     -moz-appearance: none;
 `

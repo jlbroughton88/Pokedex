@@ -1,4 +1,5 @@
 import React from "react";
+import styled from "styled-components"
 import { Link } from "react-router-dom"
 
 
@@ -48,36 +49,61 @@ class Pokemon extends React.Component {
         const { stats, height, weight, sprites } = this.state.pokemon;
 
         return (
-            <div key={name} style={pokeDiv} stats={stats} height={height} weight={weight} >
-                <p>{capitalizeFirstLetter(name)}</p>
-                {/* <Link to={`/poke/${name}`}>View</Link> */}
-                <a style={viewStyle} href={url}>View</a>
-                <p>{id}</p>
-                <img src={sprites.front_default} alt={name}></img>
-            </div>
+            <MotherDiv key={name} stats={stats} height={height} weight={weight} >
+
+                <LeftDiv>
+                    <NameP>{capitalizeFirstLetter(name)}</NameP>
+                    {/* <Link to={`/poke/${name}`}>View</Link> */}
+                    <ViewBtn href={url}>View</ViewBtn>
+                </LeftDiv>
+                    <img src={sprites.front_default} alt={name}></img>
+                
+            </MotherDiv>
         )
     }
 }
 
-const pokeDiv = {
-    width: "60%",
-    padding: "5px 10px",
-    textAlign: "center",
-    alignSelf: "center",
-    border: "1px #333 dotted",
-    background: "#f4f4f4",
-    display: "flex",
-    flexDirection: "row",
-    alignItems: "center",
-    justifyContent: "space-evenly",
-    margin: "1.5%",
-    boxShadow: "0px 3px 15px rgba(0,0,0,0.2)"
-}
+const MotherDiv = styled.div`
+    height: 100%;
+    width: 60%;
+    padding: 5px 10px;
+    text-align: center;
+    align-self: center;
+    border: 1px grey dotted;
+    background: #f4f4f4;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 1.5%;
+    box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
+    font-family: "biko";
 
-const viewStyle = {
-    textDecoration: "none",
-    border: "black solid 1px",
-    padding: "1.5%"
-}
+    @media(max-width: 600px) {
+        width: 70%;
+    }
+`
 
-export default Pokemon
+
+
+const ViewBtn = styled.a`
+    text-decoration: none;
+    padding: 1.5%;
+    color: grey;
+`
+
+const LeftDiv = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100px;
+`
+
+const NameP = styled.p`
+    font-size: 1.3rem;
+    margin: 0;
+    letter-spacing: 1px;
+`
+
+export default Pokemon;
