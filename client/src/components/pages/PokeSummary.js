@@ -1,4 +1,5 @@
 import React from 'react';
+import Header from "../Header"
 import styled from "styled-components"
 
 
@@ -70,7 +71,10 @@ class PokeSummary extends React.Component {
         console.log(types)
         return (
             <MotherDiv >
-                <IdDiv><p>ID: {id}</p></IdDiv>
+                <Header/>
+                <Container>
+                    <NameDiv><p>{capitalizeFirstLetter(name)}</p></NameDiv>
+                     <IdDiv><p>ID: {id}</p></IdDiv>
                 <SpritesDiv>
                     <img src={sprites.front_default} alt={sprites.front_default} />
                     <img src={sprites.back_default} alt={sprites.back_default} />
@@ -99,6 +103,8 @@ class PokeSummary extends React.Component {
                     <p>Appears in:</p>
                     {game_showings.map(shw => { return <span key={shw.version.name}>Pokemon {capitalizeFirstLetter(shw.version.name)} <br /> </span> })}
                 </GamesDiv>
+                </Container>
+               
             </MotherDiv>
         )
     }
@@ -110,7 +116,20 @@ export default PokeSummary;
 
 const MotherDiv = styled.div`
     text-align: center;
-    padding: 5%;
+`
+
+const Container = styled.div`
+    padding: 7%;
+`
+
+const NameDiv = styled.div`
+    margin: 1%;
+    border: #333 1px dotted;
+    padding: 1.5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 `
 
 const IdDiv = styled.div`

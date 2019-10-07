@@ -1,10 +1,11 @@
 import React from 'react'
+import { Link } from "react-router-dom"
 import styled from "styled-components"
 
 const Header = () => {
     return (
         <MotherDiv>
-            <Head>Pokedex</Head>
+            <Link to="/"><Head>Pokedex</Head></Link>
         </MotherDiv>
     )
 }
