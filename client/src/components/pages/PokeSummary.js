@@ -71,40 +71,50 @@ class PokeSummary extends React.Component {
         console.log(types)
         return (
             <MotherDiv >
-                <Header/>
+                <Header />
                 <Container>
-                    <NameDiv><p>{capitalizeFirstLetter(name)}</p></NameDiv>
-                     <IdDiv><p>ID: {id}</p></IdDiv>
-                <SpritesDiv>
-                    <img src={sprites.front_default} alt={sprites.front_default} />
-                    <img src={sprites.back_default} alt={sprites.back_default} />
-                    <img src={sprites.front_shiny} alt={sprites.front_shiny} />
-                    <img src={sprites.back_shiny} alt={sprites.back_shiny} />
-                </SpritesDiv>
-                <HeightDiv>
-                    <p>Height: {height}</p>
-                </HeightDiv>
-                <WeightDiv>
-                    <p>Weight: {weight}lbs</p>
-                </WeightDiv>
-                <AbilityDiv>
-                    <p>Abilities:</p>
-                    {abilities.map(ablty => { return <span key={ablty.ability.name}>{ablty.ability.name}<br /></span> })}
-                </AbilityDiv>
-                <TypesDiv>
-                    <p>Types:</p>
-                    {types.map(typ => { return <span key={typ.type.name}>{capitalizeFirstLetter(typ.type.name)}</span> })}
-                </TypesDiv>
-                <StatsDiv>
-                    <p>Stats:</p>
-                    {stats.map(stt => { return <span key={stt.stat.name}>{capitalizeFirstLetter(stt.stat.name)}: {stt.base_stat}<br /></span> })}
-                </StatsDiv>
-                <GamesDiv>
-                    <p>Appears in:</p>
-                    {game_showings.map(shw => { return <span key={shw.version.name}>Pokemon {capitalizeFirstLetter(shw.version.name)} <br /> </span> })}
-                </GamesDiv>
+                    <NameDiv>
+                        <Name>{capitalizeFirstLetter(name)}</Name>
+                    </NameDiv>
+                    <IdDiv><p>ID: {id}</p></IdDiv>
+                    <SpritesDiv>
+                        <DefaultDiv>
+                            <DefaultH>Default</DefaultH>
+                            <img src={sprites.front_default} alt={sprites.front_default} />
+                            <img src={sprites.back_default} alt={sprites.back_default} />
+                        </DefaultDiv>
+
+                        <ShinyDiv>
+                        <ShinyH>Shiny</ShinyH>
+                            <img src={sprites.front_shiny} alt={sprites.front_shiny} />
+                            <img src={sprites.back_shiny} alt={sprites.back_shiny} />
+                        </ShinyDiv>
+
+                    </SpritesDiv>
+                    <HeightDiv>
+                        <p>Height: {height}</p>
+                    </HeightDiv>
+                    <WeightDiv>
+                        <p>Weight: {weight}lbs</p>
+                    </WeightDiv>
+                    <AbilityDiv>
+                        <AbilitiesH>Abilities:</AbilitiesH>
+                        {abilities.map(ablty => { return <Ability key={ablty.ability.name}>{capitalizeFirstLetter(ablty.ability.name)}<br /></Ability> })}
+                    </AbilityDiv>
+                    <TypesDiv>
+                        <TypesH>Types:</TypesH>
+                        {types.map(typ => { return <Type key={typ.type.name}>{capitalizeFirstLetter(typ.type.name)}</Type> })}
+                    </TypesDiv>
+                    <StatsDiv>
+                        <StatsH>Stats:</StatsH>
+                        {stats.map(stt => { return <Stat key={stt.stat.name}>{capitalizeFirstLetter(stt.stat.name)}: {stt.base_stat}<br /></Stat> })}
+                    </StatsDiv>
+                    <GamesDiv>
+                        <GamesH>Appears in:</GamesH>
+                        {game_showings.map(shw => { return <Game key={shw.version.name}>Pokemon {capitalizeFirstLetter(shw.version.name)} <br /> </Game> })}
+                    </GamesDiv>
                 </Container>
-               
+
             </MotherDiv>
         )
     }
@@ -116,10 +126,15 @@ export default PokeSummary;
 
 const MotherDiv = styled.div`
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 `
 
 const Container = styled.div`
     padding: 7%;
+    width: 70%;
+    align-self: center;
 `
 
 const NameDiv = styled.div`
@@ -131,6 +146,11 @@ const NameDiv = styled.div`
     justify-content: center;
     align-items: center;
 `
+
+const Name = styled.h2`
+    margin: 0;
+`
+
 
 const IdDiv = styled.div`
     margin: 1%;
@@ -177,6 +197,13 @@ const AbilityDiv = styled.div`
     justify-content: center;
     align-items: center;
 `
+const AbilitiesH = styled.h4`
+margin: 0;
+font-size: 1.3rem;
+`
+
+const Ability = styled.span``
+
 const TypesDiv = styled.div`
     margin: 1%;
     border: #333 1px dotted;
@@ -186,6 +213,14 @@ const TypesDiv = styled.div`
     justify-content: center;
     align-items: center;
 `
+
+const TypesH = styled.h4`
+margin: 0;
+font-size: 1.3rem;
+`
+
+const Type = styled.span``
+
 const StatsDiv = styled.div`
     margin: 1%;
     border: #333 1px dotted;
@@ -195,6 +230,14 @@ const StatsDiv = styled.div`
     justify-content: center;
     align-items: center;
 `
+
+const StatsH = styled.h4`
+margin: 0;
+font-size: 1.3rem;
+`
+
+const Stat = styled.span``
+
 const GamesDiv = styled.div`
     margin: 1%;
     border: #333 1px dotted;
@@ -203,4 +246,25 @@ const GamesDiv = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
+`
+
+const GamesH = styled.h4`
+    margin: 0;
+    font-size: 1.3rem;
+`
+
+const Game = styled.span``
+
+const DefaultDiv = styled.div``
+
+const DefaultH = styled.h4`
+margin: 0;
+font-size: 1.3rem;
+`
+
+const ShinyDiv = styled.div``
+
+const ShinyH = styled.h4`
+    margin: 0;
+    font-size: 1.3rem;
 `
