@@ -56,6 +56,11 @@ class PokeSummary extends React.Component {
 
     render() {
 
+        let capitalizeFirstLetter = (string) => {
+            return string.charAt(0).toUpperCase() + string.slice(1);
+        };
+
+
         const {
             id, name, sprites, abilities, base_experience,
             forms, game_showings, held_items, moves,
@@ -68,16 +73,32 @@ class PokeSummary extends React.Component {
                 <IdDiv><p>ID: {id}</p></IdDiv>
                 <SpritesDiv>
                     <img src={sprites.front_default} alt={sprites.front_default} />
-                <img src={sprites.back_default} alt={sprites.back_default} />
-                <img src={sprites.front_shiny} alt={sprites.front_shiny} />
-                <img src={sprites.back_shiny} alt={sprites.back_shiny} />
-                    </SpritesDiv>
-                <HeightDiv><p>Height: {height}</p></HeightDiv>
-                <WeightDiv><p>Weight: {weight}lbs</p></WeightDiv>
-                <AbilityDiv><p>Abilities: {abilities.map(ablty => { return <span key={ablty.ability.name}>{ablty.ability.name}</span>})}</p></AbilityDiv>
-                <TypesDiv><p>Types: <br/>{types.map(typ => { return <span key={typ.type.name}>{typ.type.name}</span>})}</p></TypesDiv>
-                <StatsDiv><p>Stats: <br/>{stats.map(stt => { return <span key={stt.stat.name}>{stt.stat.name}: {stt.base_stat}<br/></span>})}</p></StatsDiv>
-                <GamesDiv><p>Appears in: Pokemon {game_showings.map(shw => { return <span key={shw.version.name}>{shw.version.name} <br/> </span>})}</p></GamesDiv>
+                    <img src={sprites.back_default} alt={sprites.back_default} />
+                    <img src={sprites.front_shiny} alt={sprites.front_shiny} />
+                    <img src={sprites.back_shiny} alt={sprites.back_shiny} />
+                </SpritesDiv>
+                <HeightDiv>
+                    <p>Height: {height}</p>
+                </HeightDiv>
+                <WeightDiv>
+                    <p>Weight: {weight}lbs</p>
+                </WeightDiv>
+                <AbilityDiv>
+                    <p>Abilities:</p>
+                    {abilities.map(ablty => { return <span key={ablty.ability.name}>{ablty.ability.name}<br /></span> })}
+                </AbilityDiv>
+                <TypesDiv>
+                    <p>Types:</p>
+                    {types.map(typ => { return <span key={typ.type.name}>{capitalizeFirstLetter(typ.type.name)}</span> })}
+                </TypesDiv>
+                <StatsDiv>
+                    <p>Stats:</p>
+                    {stats.map(stt => { return <span key={stt.stat.name}>{capitalizeFirstLetter(stt.stat.name)}: {stt.base_stat}<br /></span> })}
+                </StatsDiv>
+                <GamesDiv>
+                    <p>Appears in:</p>
+                    {game_showings.map(shw => { return <span key={shw.version.name}>Pokemon {capitalizeFirstLetter(shw.version.name)} <br /> </span> })}
+                </GamesDiv>
             </MotherDiv>
         )
     }
@@ -95,32 +116,72 @@ const MotherDiv = styled.div`
 const IdDiv = styled.div`
     margin: 1%;
     border: #333 1px dotted;
+    padding: 1.5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 `
 const SpritesDiv = styled.div`
-margin: 1%;
-border: #333 1px dotted;
+    margin: 1%;
+    border: #333 1px dotted;
+    padding: 1.5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 `
 const HeightDiv = styled.div`
-margin: 1%;
-border: #333 1px dotted;
+    margin: 1%;
+    border: #333 1px dotted;
+    padding: 1.5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 `
 const WeightDiv = styled.div`
-margin: 1%;
-border: #333 1px dotted;
+    margin: 1%;
+    border: #333 1px dotted;
+    padding: 1.5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 `
 const AbilityDiv = styled.div`
-margin: 1%;
-border: #333 1px dotted;
+    margin: 1%;
+    border: #333 1px dotted;
+    padding: 1.5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 `
 const TypesDiv = styled.div`
-margin: 1%;
-border: #333 1px dotted;
+    margin: 1%;
+    border: #333 1px dotted;
+    padding: 1.5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 `
 const StatsDiv = styled.div`
-margin: 1%;
-border: #333 1px dotted;
+    margin: 1%;
+    border: #333 1px dotted;
+    padding: 1.5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 `
 const GamesDiv = styled.div`
-margin: 1%;
-border: #333 1px dotted;
+    margin: 1%;
+    border: #333 1px dotted;
+    padding: 1.5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 `

@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/static/css/main.4eeb35e0.chunk.css",
-    "main.js": "/static/js/main.e6036742.chunk.js",
-    "main.js.map": "/static/js/main.e6036742.chunk.js.map",
+    "main.css": "/static/css/main.d780c873.chunk.css",
+    "main.js": "/static/js/main.671eeeab.chunk.js",
+    "main.js.map": "/static/js/main.671eeeab.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.11bc70d3.js",
     "runtime-main.js.map": "/static/js/runtime-main.11bc70d3.js.map",
     "static/js/2.f9a12385.chunk.js": "/static/js/2.f9a12385.chunk.js",
     "static/js/2.f9a12385.chunk.js.map": "/static/js/2.f9a12385.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.559cbe3fb7349a7b09f0c6e51dfb5156.js": "/precache-manifest.559cbe3fb7349a7b09f0c6e51dfb5156.js",
+    "precache-manifest.33b125777e3f6570eeca8c8939f8a28c.js": "/precache-manifest.33b125777e3f6570eeca8c8939f8a28c.js",
     "service-worker.js": "/service-worker.js",
-    "static/css/main.4eeb35e0.chunk.css.map": "/static/css/main.4eeb35e0.chunk.css.map",
+    "static/css/main.d780c873.chunk.css.map": "/static/css/main.d780c873.chunk.css.map",
     "static/media/index.css": "/static/media/pokemonSolid.36d26dbc.ttf"
   },
   "entrypoints": [
     "static/js/runtime-main.11bc70d3.js",
     "static/js/2.f9a12385.chunk.js",
-    "static/css/main.4eeb35e0.chunk.css",
-    "static/js/main.e6036742.chunk.js"
+    "static/css/main.d780c873.chunk.css",
+    "static/js/main.671eeeab.chunk.js"
   ]
 }
