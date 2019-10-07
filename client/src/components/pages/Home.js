@@ -1,15 +1,20 @@
 import React from 'react'
+import styled from "styled-components"
 import Header from "../Header"
 import PokemonList from "../PokemonList";
+import Footer from "../Footer"
 
 
  const Home = () => {
     return (
-        <div>
+        <MotherDiv>
             <Header/>
             <PokemonList/>
-        </div>
+            <Footer/>
+        </MotherDiv>
     )
 }
 
-export default Home
+export default Home;
+
+const MotherDiv = styled.div``

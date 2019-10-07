@@ -11,10 +11,7 @@ class Pokemon extends React.Component {
             pokemon: {
                 id: 0,
                 name: '',
-                stats: [],
-                height: '',
-                weight: '',
-                sprites: [],
+                sprites: []
             },
             isLoading: false
         }
@@ -31,10 +28,7 @@ class Pokemon extends React.Component {
                 pokemon: {
                     id: data.id,
                     name: data.name,
-                    stats: data.stats,
-                    height: data.height,
-                    weight: data.weight,
-                    sprites: data.sprites
+                    sprite: data.sprites.front_default
                 }
             }))
     }
@@ -45,19 +39,21 @@ class Pokemon extends React.Component {
             return string.charAt(0).toUpperCase() + string.slice(1);
         };
 
-        const { name, url, id } = this.props;
-        const { stats, height, weight, sprites } = this.state.pokemon;
+        const { name } = this.props;
+        const { sprite } = this.state.pokemon;
+        let newTo = {
+            pathname: `/poke/${name}`,
+            param1: name
+        }
 
         return (
-            <MotherDiv key={name} stats={stats} height={height} weight={weight} >
-
+            <MotherDiv key={name}  >
                 <LeftDiv>
                     <NameP>{capitalizeFirstLetter(name)}</NameP>
-                    {/* <Link to={`/poke/${name}`}>View</Link> */}
-                    <ViewBtn href={url}>View</ViewBtn>
+                    <Link style={viewBtn} to={newTo}>View</Link>
+                    {/* <ViewBtn href={url}>View</ViewBtn> */}
                 </LeftDiv>
-                    <img src={sprites.front_default} alt={name}></img>
-                
+                <img src={sprite} alt={name}></img>
             </MotherDiv>
         )
     }
@@ -84,14 +80,12 @@ const MotherDiv = styled.div`
     }
 `
 
-
-
-const ViewBtn = styled.a`
-    text-decoration: none;
-    padding: 1.5%;
-    color: grey;
-    font-size: 1.15rem;
-`
+const viewBtn = {
+    textDecoration: "none",
+    padding: "1.5%",
+    color: "grey",
+    fontSize: "1.15rem",
+}
 
 const LeftDiv = styled.div`
     display: flex;

@@ -10,8 +10,11 @@ const App = () => {
   return (
     <Router>
       <div className="App"></div>
-      <Route exact path="/" component={Home} />
-      <Route path="/poke" component={PokeSummary} />
+      <Switch>
+        <Route exact path="/" component={Home} />
+        <Route path="/poke/:pokemon" component={PokeSummary} />
+      </Switch>
+
     </Router>
   );
 }

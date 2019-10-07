@@ -9,8 +9,7 @@ class PokemonList extends React.Component {
         this.state = {
             pokemonList: [],
             isLoading: false,
-            currentLimit: 0,
-            currentOffset: 0
+            currentLimit: 20
         };
     };
 
@@ -22,6 +21,7 @@ class PokemonList extends React.Component {
         this.setState(prevState => ({ 
             currentLimit: prevState.currentLimit + 20
         }), () => this.fetchData())
+        console.log(this.state.currentLimit)
     }
 
     fetchData() {
@@ -45,9 +45,10 @@ class PokemonList extends React.Component {
             <div className="container">
                 {
                     !isLoading ? pokemonList.map(poke => {
-                        const { name, url, id } = poke;
+                        
+                        const { name, url } = poke;
 
-                        return <Pokemon key={name} name={name} id={id} url={url} />
+                        return <Pokemon key={name} name={name} url={url} />
                     }) : null
                 }
                 <LoadBtn className="loadBtn" onClick={this.loadMore}>Load More</LoadBtn>
