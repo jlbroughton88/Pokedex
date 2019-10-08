@@ -32,38 +32,38 @@ a{
 
 
 
-#normal{ background: #a8a877 }
+#normal{ background: #a8a877; margin: 1%; padding: 1%; padding-left: 4%; padding-right: 4%; }
 
-#water{ background: #6791e5}
+#water{ background: #6791e5; margin: 1%; padding: 1%; padding-left: 4%; padding-right: 4%; }
 
-#electric{ background: #f7d030}
+#electric{ background: #f7d030; margin: 1%; padding: 1%; padding-left: 4%; padding-right: 4%; }
 
-#fighting{ background: #c12f2a}
+#fighting{ background: #c12f2a; margin: 1%; padding: 1%; padding-left: 4%; padding-right: 4%; }
 
-#ground{ background: #e0bf67}
+#ground{ background: #e0bf67; margin: 1%; padding: 1%; padding-left: 4%; padding-right: 4%; }
 
-#psychic{ background: #f85788 }
+#psychic{ background: #f85788 ; margin: 1%; padding: 1%; padding-left: 4%; padding-right: 4%; }
 
-#rock{ background: #b89f38 }
+#rock{ background: #b89f38 ; margin: 1%; padding: 1%; padding-left: 4%; padding-right: 4%; }
 
-#dark{ background: #705849 }
+#dark{ background: #705849; color: #e4e4e4; margin: 1%; padding: 1%; padding-left: 4%; padding-right: 4%; }
 
-#steel{ background: #b8b9cf }
+#steel{ background: #b8b9cf ; margin: 1%; padding: 1%; padding-left: 4%; padding-right: 4%; }
 
-#fire{ background: #f18030 }
+#fire{ background: #f18030; margin: 1%; padding: 1%; padding-left: 4%; padding-right: 4%; }
 
-#grass{ background: #78c950 }
+#grass{ background: #78c950 ; margin: 1%; padding: 1%; padding-left: 4%; padding-right: 4%; }
 
-#ice{ background: #98d8d8 }
+#ice{ background: #98d8d8 ; margin: 1%; padding: 1%; padding-left: 4%; padding-right: 4%; }
 
-#poison{ background: #9f40a0 }
+#poison{ background: #9f40a0; color: #e4e4e4; margin: 1%; padding: 1%; padding-left: 4%; padding-right: 4%; }
 
-#flying{ background: #a990f0 }
+#flying{ background: #a990f0 ; margin: 1%; padding: 1%; padding-left: 4%; padding-right: 4%; }
 
-#bug{ background: #a7b921 }
+#bug{ background: #a7b921 ; margin: 1%; padding: 1%; padding-left: 4%; padding-right: 4%; }
 
-#ghost{ background: #6f5897 }
+#ghost{ background: #6f5897 ; margin: 1%; padding: 1%; padding-left: 4%; padding-right: 4%; }
 
-#dragon{ background: #7038f9 }
+#dragon{ background: #7038f9 ; margin: 1%; padding: 1%; padding-left: 4%; padding-right: 4%; }
 
-#fairy{ background: #f0b6bd }
+#fairy{ background: #f0b6bd ; margin: 1%; padding: 1%; padding-left: 4%; padding-right: 4%; }

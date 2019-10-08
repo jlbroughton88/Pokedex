@@ -74,6 +74,7 @@ const MotherDiv = styled.div`
     margin: 1.5%;
     box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
     font-family: "biko";
+    max-width: 650px;
 
     @media(max-width: 600px) {
         width: 70%;

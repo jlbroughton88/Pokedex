@@ -9,7 +9,8 @@ class PokemonList extends React.Component {
         this.state = {
             pokemonList: [],
             isLoading: false,
-            currentLimit: 20
+            currentLimit: 20,
+            searchValue: ""
         };
     };
 
@@ -18,11 +19,12 @@ class PokemonList extends React.Component {
     };
 
     loadMore = () => {
-        this.setState(prevState => ({ 
+        this.setState(prevState => ({
             currentLimit: prevState.currentLimit + 20
         }), () => this.fetchData())
         console.log(this.state.currentLimit)
     }
+
 
     fetchData() {
         const { currentLimit, currentOffset } = this.state;
@@ -39,13 +41,17 @@ class PokemonList extends React.Component {
 
 
     render() {
-        const { pokemonList, isLoading } = this.state;
+        const { pokemonList, isLoading, searchValue } = this.state;
+
+
 
         return (
             <div className="container">
+                {/* <input name="search" id="search" type="text" value={searchValue} autoComplete="off" />
+                <button type="submit" >Search</button> */}
                 {
                     !isLoading ? pokemonList.map(poke => {
-                        
+
                         const { name, url } = poke;
 
                         return <Pokemon key={name} name={name} url={url} />
