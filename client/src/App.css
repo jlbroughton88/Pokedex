@@ -17,3 +17,53 @@ a{
     text-decoration: none;
     color: inherit;
 }
+
+#speed{}
+
+#special-defense{}
+
+#special-attack{}
+
+#defense{}
+
+#attack{}
+
+#hp{}
+
+
+
+#normal{ background: #a8a877 }
+
+#water{ background: #6791e5}
+
+#electric{ background: #f7d030}
+
+#fighting{ background: #c12f2a}
+
+#ground{ background: #e0bf67}
+
+#psychic{ background: #f85788 }
+
+#rock{ background: #b89f38 }
+
+#dark{ background: #705849 }
+
+#steel{ background: #b8b9cf }
+
+#fire{ background: #f18030 }
+
+#grass{ background: #78c950 }
+
+#ice{ background: #98d8d8 }
+
+#poison{ background: #9f40a0 }
+
+#flying{ background: #a990f0 }
+
+#bug{ background: #a7b921 }
+
+#ghost{ background: #6f5897 }
+
+#dragon{ background: #7038f9 }
+
+#fairy{ background: #f0b6bd }
