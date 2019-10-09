@@ -46,7 +46,7 @@ class PokemonList extends React.Component {
 
 
         return (
-            <div className="container">
+            <div className="pokeContainer">
                 {/* <input name="search" id="search" type="text" value={searchValue} autoComplete="off" />
                 <button type="submit" >Search</button> */}
                 {
@@ -69,13 +69,24 @@ const LoadBtn = styled.button`
     justify-content: center;
     margin-top: 2.5%;
     padding: 7px 12px;
-    font-size: 1rem;
+    font-size: 1.15rem;
     cursor: pointer;
     font-family: "biko";
     outline: none;
+    padding: 2%;
+    max-width: 156px;
+    max-height: 69px;
+
+
     
     -webkit-appearance: none;
     -moz-appearance: none;
+
+    @media(min-width: 800px) {
+        font-size: 1.3rem;
+        padding: 2%;
+    }
+
 `
 
 export default PokemonList;

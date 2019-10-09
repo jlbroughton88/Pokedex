@@ -1,5 +1,6 @@
 import React from 'react';
 import Header from "../Header"
+import Footer from "../Footer"
 import styled from "styled-components"
 
 
@@ -83,14 +84,14 @@ class PokeSummary extends React.Component {
                     <SpritesDiv>
                         <DefaultDiv>
                             <DefaultH>Default</DefaultH>
-                            <img src={sprites.front_default} alt={sprites.front_default} />
-                            <img src={sprites.back_default} alt={sprites.back_default} />
+                            <Img src={sprites.front_default} alt={sprites.front_default} />
+                            <Img src={sprites.back_default} alt={sprites.back_default} />
                         </DefaultDiv>
 
                         <ShinyDiv>
                             <ShinyH>Shiny</ShinyH>
-                            <img src={sprites.front_shiny} alt={sprites.front_shiny} />
-                            <img src={sprites.back_shiny} alt={sprites.back_shiny} />
+                            <Img src={sprites.front_shiny} alt={sprites.front_shiny} />
+                            <Img src={sprites.back_shiny} alt={sprites.back_shiny} />
                         </ShinyDiv>
 
                     </SpritesDiv>
@@ -118,7 +119,7 @@ class PokeSummary extends React.Component {
                         {stats.map(stt => { return <Stat id={stt.stat.name} key={stt.stat.name}>{capitalizeFirstLetter(stt.stat.name)}: {stt.base_stat}<br /></Stat> })}
                     </StatsDiv>
                 </Container>
-
+            <Footer/>
             </MotherDiv>
         )
     }
@@ -141,6 +142,7 @@ const Container = styled.div`
     align-self: center;
     max-width: 720px;
 `
+
 
 const NameId = styled.div`
     display: flex;
@@ -182,11 +184,21 @@ const SpritesDiv = styled.div`
     margin: 1%;
     border: #333 1px dotted;
     padding: 2.3%;
+    padding-top: 4%;
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
+
 `
+
+const Img = styled.img`
+// @media(min-width: 750px) {
+//     height: 60%;
+//     width: 55%;
+// }
+`
+
 
 const HeightWeight = styled.div`
     display: flex;
@@ -312,11 +324,6 @@ const StatsDiv = styled.div`
     
 `
 
-const StatsH = styled.h4`
-    margin: 0;
-    font-size: 1.3rem;
-`
-
 const Stat = styled.span`
     width: 40%;
     height: 10%;
@@ -327,6 +334,9 @@ const Stat = styled.span`
 
    @media(max-width: 590px) {
     width: 80%;
+    margin: 1%;
+    padding-top: 1%;
+    padding-bottom: 1%;
     }
 
     @media(min-width: 750px) {
@@ -346,9 +356,14 @@ const DefaultH = styled.h4`
     font-size: 1.3rem;
 `
 
-const ShinyDiv = styled.div``
+const ShinyDiv = styled.div`
+
+`
+
 
 const ShinyH = styled.h4`
     margin: 0;
     font-size: 1.3rem;
+
+    
 `

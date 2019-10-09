@@ -23,6 +23,8 @@ const MotherDiv = styled.div`
     color: #e4e4e4;
     flex-direction: column;
     padding: 1.5%;
+    bottom: 0;
+    width: 100%;
 `
 
 const PokedexP = styled.p`
