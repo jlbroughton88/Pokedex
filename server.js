@@ -2,13 +2,6 @@ const express = require("express");
 const path = require("path");
 const app = express();
 
-// app.get("/server", (req, res) => {
-//     res.send("Hello from server")
-// })
-
-// app.use(express.static(path.join(__dirname, "/client/build")))
-
-// app.use("/", require("./routes.js"))
 
 if(process.env.NODE_ENV === "production") {
     app.use(express.static("client/build"));
