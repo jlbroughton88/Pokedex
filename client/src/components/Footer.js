@@ -22,7 +22,7 @@ const MotherDiv = styled.div`
     font-family: biko;
     color: #e4e4e4;
     flex-direction: column;
-    padding: 1.5%;
+    padding: 1.5% 0;
     bottom: 0;
     width: 100%;
 `

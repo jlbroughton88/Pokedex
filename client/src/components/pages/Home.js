@@ -17,4 +17,6 @@ import Footer from "../Footer"
 
 export default Home;
 
-const MotherDiv = styled.div``
+const MotherDiv = styled.div`
+width: 100%;
+`

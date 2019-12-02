@@ -129,6 +129,8 @@ class PokeSummary extends React.Component {
 
 export default PokeSummary;
 
+
+
 const MotherDiv = styled.div`
     text-align: center;
     display: flex;
@@ -152,12 +154,14 @@ const NameId = styled.div`
 const NameDiv = styled.div`
     width: 75%;
     margin: 1%;
-    border: #333 1px dotted;
     padding: 2.3%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    border: #383838 1px solid;
+    border-radius: 5px;
+    box-shadow: 0 3px 10px rgba(58, 58, 58, 0.4);
 `
 
 const Name = styled.h2`
@@ -173,30 +177,31 @@ const Name = styled.h2`
 const IdDiv = styled.div`
     width: 25%;
     margin: 1%;
-    border: #333 1px dotted;
+    border: #383838 1px dotted;
     padding: 2.3%;
     font-size: 1.75rem;
     display: flex;
     justify-content: center;
     align-items: center;
+    border: #383838 1px solid;
+    border-radius: 5px;
 `
 const SpritesDiv = styled.div`
     margin: 1%;
-    border: #333 1px dotted;
+    border: #383838 1px dotted;
     padding: 2.3%;
     padding-top: 4%;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
+    border: #383838 1px solid;
+    border-radius: 5px;
 
 `
 
 const Img = styled.img`
-// @media(min-width: 750px) {
-//     height: 60%;
-//     width: 55%;
-// }
+filter: drop-shadow(0 2px 3px rgba(58, 58, 58, 0.4));
 `
 
 
@@ -208,26 +213,31 @@ const HeightWeight = styled.div`
 const HeightDiv = styled.div`
     width: 50%;
     margin: 1%;
-    border: #333 1px dotted;
+    border: #383838 1px dotted;
     padding: 2.3%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    border: #383838 1px solid;
+    border-radius: 5px;
 
     @media(min-width: 750px) {
         font-size: 1.4rem;
+        
     }
 `
 const WeightDiv = styled.div`
     width: 50%;
     margin: 1%;
-    border: #333 1px dotted;
+    border: #383838 1px dotted;
     padding: 2.3%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    border: #383838 1px solid;
+    border-radius: 5px;
 
     @media(min-width: 750px) {
         font-size: 1.4rem;
@@ -242,13 +252,15 @@ const AbilityType = styled.div`
 const AbilityDiv = styled.div`
     width: 50%;
     margin: 1%;
-    border: #333 1px dotted;
+    border: #383838 1px dotted;
     padding: 2.3%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     line-height: 130%;
+    border: #383838 1px solid;
+    border-radius: 5px;
 `
 const AbilitiesH = styled.h4`
     margin: 0;
@@ -286,13 +298,15 @@ const Ability = styled.span`
 const TypesDiv = styled.div`
     width: 50%;
     margin: 1%;
-    border: #333 1px dotted;
+    border: #383838 1px dotted;
     padding: 2.3%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     line-height: 140%;
+    border: #383838 1px solid;
+    border-radius: 5px;
 `
 
 const TypesH = styled.h4`
@@ -305,17 +319,23 @@ const TypesH = styled.h4`
     }
 `
 
-const Type = styled.span``
+const Type = styled.span`
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+`
 
 const StatsDiv = styled.div`
     margin: 1%;
-    border: #333 1px dotted;
+    border: #383838 1px dotted;
     padding: 2.3%;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    border: #383838 1px solid;
+    border-radius: 5px;
 
     @media(max-width: 590px) {
         flex-direction: column;

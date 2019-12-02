@@ -11,13 +11,37 @@
 
 p{
     margin: 0;
+    padding: 0;
 }
 
 a{
     text-decoration: none;
     color: inherit;
+    padding: 0;
+    margin: 0;
 }
 
+.viewBtn{
+    align-self: center;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 0;
+    width: 60%;
+    transition: all ease-in-out 0.3s;
+    max-width: 650px;
+    box-shadow: 0px 3px 10px rgba(56,56,56,0.3);
+}
+
+.viewBtn:hover{   
+    transform: perspective(1px) scale3d(1.1, 1.1, 1)
+}
+
+    @media(max-width: 600px) {
+        .viewBtn{
+             width: 70%;
+        }
+    }
 #speed{}
 
 #special-defense{}
@@ -30,40 +54,25 @@ a{
 
 #hp{}
 
+#normal, #water, #electric, #fighting, #ground, #psychic, #rock, #dark, #steel, #fire, #grass, #ice, #poison, #flying, #bug, #ghost, #dragon{
+    margin: 1%; padding: 1%; padding-left: 4%; padding-right: 4%;
+}
 
-
-#normal{ background: #a8a877; margin: 1%; padding: 1%; padding-left: 4%; padding-right: 4%; }
-
-#water{ background: #6791e5; margin: 1%; padding: 1%; padding-left: 4%; padding-right: 4%; }
-
-#electric{ background: #f7d030; margin: 1%; padding: 1%; padding-left: 4%; padding-right: 4%; }
-
-#fighting{ background: #c12f2a; margin: 1%; padding: 1%; padding-left: 4%; padding-right: 4%; }
-
-#ground{ background: #e0bf67; margin: 1%; padding: 1%; padding-left: 4%; padding-right: 4%; }
-
-#psychic{ background: #f85788 ; margin: 1%; padding: 1%; padding-left: 4%; padding-right: 4%; }
-
-#rock{ background: #b89f38 ; margin: 1%; padding: 1%; padding-left: 4%; padding-right: 4%; }
-
-#dark{ background: #705849; color: #e4e4e4; margin: 1%; padding: 1%; padding-left: 4%; padding-right: 4%; }
-
-#steel{ background: #b8b9cf ; margin: 1%; padding: 1%; padding-left: 4%; padding-right: 4%; }
-
-#fire{ background: #f18030; margin: 1%; padding: 1%; padding-left: 4%; padding-right: 4%; }
-
-#grass{ background: #78c950 ; margin: 1%; padding: 1%; padding-left: 4%; padding-right: 4%; }
-
-#ice{ background: #98d8d8 ; margin: 1%; padding: 1%; padding-left: 4%; padding-right: 4%; }
-
-#poison{ background: #9f40a0; color: #e4e4e4; margin: 1%; padding: 1%; padding-left: 4%; padding-right: 4%; }
-
-#flying{ background: #a990f0 ; margin: 1%; padding: 1%; padding-left: 4%; padding-right: 4%; }
-
-#bug{ background: #a7b921 ; margin: 1%; padding: 1%; padding-left: 4%; padding-right: 4%; }
-
-#ghost{ background: #6f5897 ; margin: 1%; padding: 1%; padding-left: 4%; padding-right: 4%; }
-
-#dragon{ background: #7038f9 ; margin: 1%; padding: 1%; padding-left: 4%; padding-right: 4%; }
-
-#fairy{ background: #f0b6bd ; margin: 1%; padding: 1%; padding-left: 4%; padding-right: 4%; }
+#normal{ background: #a8a877;  }
+#water{ background: #6791e5;}
+#electric{ background: #f7d030;}
+#fighting{ background: #c12f2a;}
+#ground{ background: #e0bf67;}
+#psychic{ background: #f85788 ;}
+#rock{ background: #b89f38 ;}
+#dark{ background: #705849; color: #e4e4e4;}
+#steel{ background: #b8b9cf ;}
+#fire{ background: #f18030;}
+#grass{ background: #78c950 ;}
+#ice{ background: #98d8d8 ;}
+#poison{ background: #9f40a0; color: #e4e4e4;}
+#flying{ background: #a990f0 ;}
+#bug{ background: #a7b921 ;}
+#ghost{ background: #6f5897 ;}
+#dragon{ background: #7038f9 ;}
+#fairy{ background: #f0b6bd ;}

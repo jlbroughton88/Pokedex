@@ -68,23 +68,28 @@ const LoadBtn = styled.button`
     display: flex;
     justify-content: center;
     margin-top: 2.5%;
-    padding: 7px 12px;
     font-size: 1.15rem;
     cursor: pointer;
     font-family: "biko";
     outline: none;
-    padding: 2%;
-    max-width: 156px;
-    max-height: 69px;
-
-
-    
+    padding: 0;
+    padding: 2px 4px;
     -webkit-appearance: none;
     -moz-appearance: none;
+    transition: all ease-in-out 0.3s;
+    border-radius: 5px;
 
     @media(min-width: 800px) {
         font-size: 1.3rem;
         padding: 2%;
+    }
+
+    
+
+    :hover{
+        transform: scale(1.05);
+        background: #383838;
+        color: #ffffff;
     }
 
 `
