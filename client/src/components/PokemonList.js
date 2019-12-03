@@ -68,26 +68,28 @@ const LoadBtn = styled.button`
     display: flex;
     justify-content: center;
     margin-top: 2.5%;
-    font-size: 1.15rem;
+    font-size: 1.3rem;
     cursor: pointer;
     font-family: "biko";
     outline: none;
-    padding: 0;
-    padding: 2px 4px;
+    padding: 7px 12px;
     -webkit-appearance: none;
     -moz-appearance: none;
     transition: all ease-in-out 0.3s;
     border-radius: 5px;
-
-    @media(min-width: 800px) {
-        font-size: 1.3rem;
-        padding: 2%;
+    animation: scaler 1s infinite alternate;
+    
+    @keyframes scaler{
+        from{ 
+            transform: scale(1.0);
+            box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+    }
+        to{ 
+            transform: scale(1.05) ;
+            box-shadow: 0 3px 7px rgba(58, 58, 58, 0.25)}
     }
 
-    
-
     :hover{
-        transform: scale(1.05);
         background: #383838;
         color: #ffffff;
     }

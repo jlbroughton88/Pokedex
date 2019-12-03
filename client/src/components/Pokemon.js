@@ -73,12 +73,6 @@ const MotherDiv = styled.div`
 
 `
 
-// const viewBtn = {
-//     textDecoration: "none",
-//     color: "grey",
-//     fontSize: "1.15rem"
-// }
-
 const LeftDiv = styled.div`
     display: flex;
     justify-content: center;
